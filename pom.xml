@@ -85,6 +85,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>plan-micro</finalName>
     </build>
 
 </project>
