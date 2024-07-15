@@ -1,5 +1,5 @@
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
-COPY target/users-micro.jar users-micro.jar
+COPY target/plan-micro.jar plan-micro.jar
 EXPOSE 8080
-CMD ["java","-jar","users-micro.jar"]
+CMD ["java","-jar","plan-micro.jar"]
