@@ -6,7 +6,7 @@ import com.example.planservice.domain.model.dto.response.BaseResponse;
 import java.util.List;
 
 public interface PlanService {
-    BaseResponse create(PlanRequest plan);
+    BaseResponse create(PlanRequest plan, Long eventId);
 
     BaseResponse getById(Long id);
 

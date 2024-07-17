@@ -16,6 +16,9 @@ public class Category {
 
     private String name;
 
-    private List<Event> events;
+    private List<String> activities;
 
+    private String imageUrl;
+
+    private List<Event> events;
 }

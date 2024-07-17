@@ -5,7 +5,7 @@ import com.example.planservice.domain.model.Plan;
 import java.util.List;
 
 public interface PlanPersistencePort {
-    Plan create(Plan plan);
+    Plan create(Plan plan, Long eventId);
 
     Plan getById(Long id);
 

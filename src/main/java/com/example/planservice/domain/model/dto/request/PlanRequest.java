@@ -17,7 +17,7 @@ public class PlanRequest {
     
     private Long matchId;
 
-    private List<PlanRequest> places;
+    private List<PlaceRequest> places;
 
     private Long eventId;
 }

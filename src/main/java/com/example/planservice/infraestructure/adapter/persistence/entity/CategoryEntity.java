@@ -1,6 +1,7 @@
 package com.example.planservice.infraestructure.adapter.persistence.entity;
 
 import com.example.planservice.domain.model.Event;
+import com.example.planservice.infraestructure.adapter.mapper.ListToStringConverter;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,7 +22,13 @@ public class CategoryEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(name = "name", unique = true)
     private String name;
+
+    @Convert(converter = ListToStringConverter.class)
+    private List<String> activities;
+
+    private String imageUrl;
 
     @ManyToMany(mappedBy = "categories")
     private List<EventEntity> events = new ArrayList<>();

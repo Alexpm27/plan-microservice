@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class EventSpringAdapter implements EventPersistencePort {
+public class EventSpringJpaAdapter implements EventPersistencePort {
     @Autowired
     private EventRepository repository;
 
