@@ -62,6 +62,7 @@ public class EventSpringJpaAdapter implements EventPersistencePort {
 
     }
 
+    @Override
     public EventEntity findAndEnsureExist(Long id){
         return repository.findById(id).orElseThrow(NotFoundException::new);
     }

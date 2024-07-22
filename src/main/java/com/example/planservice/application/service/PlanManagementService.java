@@ -24,6 +24,7 @@ public class PlanManagementService implements PlanService {
     @Override
     public BaseResponse create(PlanRequest plan, Long eventId) {
         var planRequest = planMapper.toDomain(plan);
+        planRequest.setIsComplete(Boolean.FALSE);
         var planCreated = port.create(planRequest,eventId);
         return BaseResponse.builder()
                 .data(planMapper.toDto(planCreated))
@@ -66,7 +67,7 @@ public class PlanManagementService implements PlanService {
         var planUpdated = port.update(planRequest);
         return BaseResponse.builder()
                 .data(planMapper.toDto(planUpdated))
-                .message("Plan created successfully")
+                .message("Plan updated successfully")
                 .success(Boolean.TRUE)
                 .httpStatus(HttpStatus.CREATED)
                 .statusCode(201)

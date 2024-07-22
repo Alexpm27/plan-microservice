@@ -1,6 +1,7 @@
 package com.example.planservice.domain.port;
 
 import com.example.planservice.domain.model.Event;
+import com.example.planservice.infraestructure.adapter.persistence.entity.EventEntity;
 
 import java.util.List;
 
@@ -14,5 +15,7 @@ public interface EventPersistencePort {
     Event update(Event event);
 
     void deleteById(Long id);
+
+    EventEntity findAndEnsureExist(Long id);
 
 }
