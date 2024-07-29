@@ -27,5 +27,7 @@ public class EventResponse {
 
     private String address;
 
+    private String imageUrl;
+
     private List<String> categories;
 }

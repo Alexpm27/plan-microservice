@@ -36,6 +36,8 @@ public class EventEntity {
 
     private String address;
 
+    private String imageUrl;
+
     @ManyToMany
     @JoinTable(
             name = "event_category",

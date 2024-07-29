@@ -29,6 +29,8 @@ public class Event {
 
     private String address;
 
+    private String imageUrl;
+
     private List<Category> categories;
 
     private List<Plan> plans;

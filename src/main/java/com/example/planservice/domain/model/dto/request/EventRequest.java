@@ -21,5 +21,7 @@ public class EventRequest {
 
     private double longitude;
 
+    private String imageUrl;
+
     private String address;
 }

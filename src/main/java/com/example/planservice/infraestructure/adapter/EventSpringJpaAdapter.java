@@ -44,8 +44,8 @@ public class EventSpringJpaAdapter implements EventPersistencePort {
     }
 
     @Override
-    public List<Event> getByCategories(List<Long> categoriesId) {
-        List<CategoryEntity> categoryEntities = categoryRepository.findAllById(categoriesId);
+    public List<Event> getByCategories(List<String> names) {
+        List<CategoryEntity> categoryEntities = categoryRepository.findAllByNameIn(names);
         return repository.findByCategoriesIn(categoryEntities)
                 .stream()
                 .map(dboMapper::toDomain)

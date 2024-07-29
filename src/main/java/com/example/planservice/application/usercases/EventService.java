@@ -10,7 +10,7 @@ public interface EventService {
 
     BaseResponse getById(Long id);
 
-    BaseResponse getByCategories(List<Long> categoriesId);
+    BaseResponse getByCategories(List<String> names);
 
     BaseResponse update(EventRequest event);
 

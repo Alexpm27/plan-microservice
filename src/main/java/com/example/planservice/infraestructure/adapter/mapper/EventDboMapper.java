@@ -24,6 +24,7 @@ public class EventDboMapper {
         event.setTitle(entity.getTitle());
         event.setDescription(entity.getDescription());
         event.setDate(entity.getDate());
+        event.setImageUrl(entity.getImageUrl());
         event.setComplete(entity.isComplete());
         event.setLatitude(entity.getLatitude());
         event.setLongitude(entity.getLongitude());
@@ -38,6 +39,7 @@ public class EventDboMapper {
         entity.setTitle(event.getTitle());
         entity.setDescription(event.getDescription());
         entity.setDate(event.getDate());
+        entity.setImageUrl(event.getImageUrl());
         entity.setComplete(event.isComplete());
         entity.setLatitude(event.getLatitude());
         entity.setLongitude(event.getLongitude());

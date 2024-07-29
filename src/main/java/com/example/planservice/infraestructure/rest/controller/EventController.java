@@ -27,7 +27,7 @@ public class EventController {
     }
 
     @GetMapping("/ByCategories")
-    public ResponseEntity<BaseResponse> getByCategories(@RequestParam List<Long> categoriesId){
-        return new ResponseEntity<>(service.getByCategories(categoriesId), HttpStatus.OK);
+    public ResponseEntity<BaseResponse> getByCategories(@RequestParam List<String> names){
+        return new ResponseEntity<>(service.getByCategories(names), HttpStatus.OK);
     }
 }

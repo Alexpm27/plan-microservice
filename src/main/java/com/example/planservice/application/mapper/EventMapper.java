@@ -16,6 +16,7 @@ public class EventMapper {
         event.setDescription(request.getDescription());
         event.setDate(request.getDate());
         event.setComplete(Boolean.FALSE);
+        event.setImageUrl(request.getImageUrl());
         event.setLatitude(request.getLatitude());
         event.setLongitude(request.getLongitude());
         event.setAddress(request.getAddress());
@@ -33,6 +34,7 @@ public class EventMapper {
                 .description(event.getDescription())
                 .date(event.getDate())
                 .isComplete(event.isComplete())
+                .imageUrl(event.getImageUrl())
                 .latitude(event.getLatitude())
                 .longitude(event.getLongitude())
                 .address(event.getAddress())

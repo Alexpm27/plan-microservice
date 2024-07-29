@@ -10,7 +10,7 @@ public interface EventPersistencePort {
 
     Event getById(Long id);
 
-    List<Event> getByCategories(List<Long> categoriesId);
+    List<Event> getByCategories(List<String> names);
 
     Event update(Event event);
 

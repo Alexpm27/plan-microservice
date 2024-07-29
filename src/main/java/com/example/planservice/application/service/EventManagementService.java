@@ -53,8 +53,8 @@ public class EventManagementService implements EventService {
     }
 
     @Override
-    public BaseResponse getByCategories(List<Long> categoriesId) {
-        var eventsList = port.getByCategories(categoriesId);
+    public BaseResponse getByCategories(List<String> names) {
+        var eventsList = port.getByCategories(names);
         return BaseResponse.builder()
                 .data(eventMapper.toDtoList(eventsList))
                 .message("Get Event List Successfully")
